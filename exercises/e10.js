@@ -5,7 +5,9 @@ import { data } from "../data/data";
 // Return example: { key1: value1, key2: value2, ... , keyN: valueN }
 
 export function getAsteroidDataByName(data, asteroidName) {
-  // Your code goes here...
+  const asteroids = data.asteroids;
+  const asteroidObj = asteroids.filter((asteroid) => asteroid.name.includes(asteroidName));
+  return asteroidObj[0];
 }
 
 
